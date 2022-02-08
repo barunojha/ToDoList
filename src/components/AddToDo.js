@@ -1,7 +1,7 @@
 import React from "react";
 import {useRef} from "react";
 
-function AddToDo({setData}) {
+function AddToDo({data, setData}) {
 
   const inputRef = useRef();
 
@@ -9,7 +9,7 @@ function AddToDo({setData}) {
     e.preventDefault();
     const title = e.target.elements.AddToDo.value;
     const todo = {
-      id: '4',
+      id: data.length + 1,
       title,
       done: false,
     }
